@@ -1,0 +1,4 @@
+create database if not exixts demo;
+use demo;
+create table if not exists emp(empno int,ename varchar(20),sal int);
+

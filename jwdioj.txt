@@ -1,0 +1,12 @@
+pipe.component.html
+
+<input type="text" [(ngModel)]="title"/>
+<span class="text-danger" *ngIf="(title | req) as result">blacklisted</span>
+<span class="text-success" *ngIf="!(title | req) as result">all okay</span>
+<button  disabled="result">submit</button>
+
+req.pipe.ts
+if(value.includes("idiot") || value.includes("stupid") || value.includes("mad")) 
+    return 1;
+    else
+    return 0;

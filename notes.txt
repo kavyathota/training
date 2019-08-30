@@ -1,0 +1,9 @@
+object -any
+void -void
+boolean -boolean
+interger
+long          -number 
+short
+string
+char		-string
+type[] -type[]

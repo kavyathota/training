@@ -1,0 +1,31 @@
+
+describe("Test first class",()=>{
+beforeEach(()=>{
+
+});
+afterEach(()=>{
+
+});
+beforeAll(()=>{
+
+});
+afterAll(()=>{
+
+});
+
+
+it("",()=>{
+expect(true).toBe(true);
+});
+
+it("",async()=>{
+  expect(1).toEqual("1");
+});
+
+it("",fakeAsync(()=>{
+  let db:object;
+  expect(db.getData()).toEqual("data reeived");
+}))
+
+it("Pending");
+})

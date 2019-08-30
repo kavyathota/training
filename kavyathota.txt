@@ -1,0 +1,102 @@
+FINAL ASSESSMENT                                                                NAME:KAVYA THOTA
+
+1.C
+2.B
+3.A,B
+4.B
+5.CODE :
+let list: number[] = [ 3, 4, 2, 6, 8, 10, 12, 15, 20];
+let filter = (list1:number[]): number[] => {
+    let list2:number[]=[];
+    for(let list of list1)
+    if(list%2==0)
+list2.push(list);
+    return list2;
+}
+list=filter(list);
+console.log(list);
+6.CODE :
+var total = [56, 23, 78, 12, 66, 45, 89].reduce(function(a, b){ return a + b; }); 
+console.log("total is : " + total );
+7.CODE :
+let list: number[] = [45, 40, 32, 12, 67, 88, 45, 24, 19];
+function filter(list1:number[]): number[]  {
+    let list2:number[]=[];
+    for(let list of list1)
+    if(list%4==0)
+list2.push(list);
+    return list2;
+}
+list=filter(list);
+console.log(list);
+8.C
+9.C
+10.D
+11.D
+12.C
+13.D
+14.A,C
+15.D
+16.A
+17.D
+18.A
+19.C
+20.C
+21.D
+22.A
+23.C
+24.B
+25.B
+26.B
+27.B
+28.B
+29.B
+30.D
+31.A
+32.C
+33.A
+34.D
+35.B,C,D
+36.QUERY
+SELECT
+  EmailAdd,
+  CASE WHEN EmailAdd LIKE '%_@_%_.__%'
+       AND EmailAdd NOT LIKE '%[Invalid Chars]%'
+  THEN 'Email Address is Correct'
+  ELSE 'Invalid Email Address'
+  END AS 'MSG'
+FROM
+  Table1
+37.QUERY :
+create procedure spproc (sdate date,edate date, insertdate date ) 
+BEGIN 
+create table calendar(cdate date,weekday varchar(3),monthno int,quarter varchar(8),year int) ; 
+    CASE 
+        WHEN MONTH(insertdate) BETWEEN 1  AND 3  THEN 'Q3' 
+        WHEN MONTH(insertdate) BETWEEN 4  AND 6  THEN 'Q4' 
+        WHEN MONTH(insertdate) BETWEEN 7  AND 9  THEN 'Q1' 
+        WHEN MONTH(insertdate) BETWEEN 10 AND 12 THEN 'Q2' 
+    END AS Quarter; 
+IF (insertdate >=sdate AND insertdate<=edate) 
+ BEGIN 
+  insert into table values(curdate(),select (EXTRACT(DAY FROM date)),select (EXTRACT(MONTH FROM date)),Quarter,select (EXTRACT(YEAR FROM date))); 
+ END;  
+ END; 
+CALL spproc ('2019/01/01'.'2020/01/01','2019/02/14');
+38.FOR EVEN ROWS:
+SELECT * FROM Employee WHERE MOD(rownum,2)=0;
+FOR ODD ROWS:
+SELECT * FROM Employee WHERE MOD(rownum,2)=1;
+39.QUERY :
+SELECT FirstName, LastName, MobileNo, COUNT(*) as CNT
+FROM  CUSTOMER
+GROUP BY FirstName, LastName, MobileNo;
+HAVING COUNT(*)  = 1
+40.QUERY :
+SELECT Salary,EmpName
+FROM
+  (
+   SELECT Salary,EmpName,ROW_NUMBER() OVER(ORDER BY Salary) As RowNum
+   FROM EMPLOYEE
+   ) As A
+WHERE A.RowNum IN (2,3) 

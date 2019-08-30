@@ -1,0 +1,26 @@
+{
+  "admins": [
+    {
+      "username": "admin",
+      "password": "root"
+    },
+    {
+      "username": "john",
+      "password": "johnbonda"
+    },
+    {
+      "username": "swaroopa",
+      "password": "swaroopasaru"
+    },
+    {
+      "username": "kavya",
+      "password": "kavyathota"
+    }
+  ],
+  "newJoinees": [
+    {
+      "id": 1,
+      "name": "Kavya Priyanka"
+    }
+  ]
+}

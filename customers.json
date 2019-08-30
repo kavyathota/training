@@ -1,0 +1,22 @@
+{
+  "customers": [
+    {
+      "name": "NewCustomer002",
+      "email": "newcustomer002@gmail.com",
+      "tel": "0000252522",
+      "id": 2
+    },
+    {
+      "name": "NewCustomer003",
+      "email": "newcustomer003@gmail.com",
+      "tel": "0000252523",
+      "id": 3
+    },
+    {
+      "name": "customer006",
+      "email": "customer006@gmail.com",
+      "tel": "0000060007",
+      "id": 4
+    }
+  ]
+}

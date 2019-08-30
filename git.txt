@@ -1,0 +1,12 @@
+>git init
+>git config --global user.email "youremail@mail.com"
+>create your files using touch,cat
+>git status
+>git log
+>touch file.txt,file2.txt
+>git status
+>git add filename/none -A
+>git commit filename -m "commit message if any"
+>git status
+>git log
+>git merge master fordevelopment
